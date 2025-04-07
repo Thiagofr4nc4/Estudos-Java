@@ -1,7 +1,6 @@
 package Npolimorfismo.dominio.service;
 
 import Npolimorfismo.dominio.Computador;
-import Npolimorfismo.dominio.Produto;
 import Npolimorfismo.dominio.Tomate;
 
 public  class CalculadoraImposto {
@@ -13,16 +12,12 @@ public  class CalculadoraImposto {
         System.out.println("Imposto a ser pago:  " + imposto);
     }
 
-        public static void voidcalcularImposto(Produto produto){
-            System.out.println("Relatorio de Imposto");
-            double imposto = produto.calcularImposto();
-            System.out.println("Produto: " + produto.getNome());
-            System.out.println("Preço: " + produto.getValor());
-            System.out.println("Imposto a ser pago: " + imposto);
-            if (produto instanceof Tomate){
-            Tomate tomate = (Tomate) produto;
-            System.out.println(tomate.getDataValidade());
+        public static void calcularImpostoTomate(Tomate tomate){
+            System.out.println("Relatorio de Imposto do Tomate");
+            double imposto = tomate.calcularImposto();
+            System.out.println("Tomate: " + tomate.getNome());
+            System.out.println("Valor do Tomate: " + tomate.getValor());
+            System.out.println("Imposto a ser pago:  " + imposto);
         }
-    }
 
 }
